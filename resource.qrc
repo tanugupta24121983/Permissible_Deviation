@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/292.png</file>
+        <file>Images/801.png</file>
+        <file>Images/Isgec-logo.jpg</file>
+    </qresource>
+</RCC>

@@ -15,6 +15,22 @@ public:
     Permissible_Deviation(QWidget *parent = nullptr);
     ~Permissible_Deviation();
 
+private slots:
+
+    void on_le_outside_diameter_cy_shell_textChanged(const QString &arg1);
+
+    void on_le_normal_thickness_shell_editingFinished();
+
+    void on_le_corrosion_allowance_editingFinished();
+
+    void on_le_inside_diameter_shell_editingFinished();
+
+    void on_le_thickness_less_CA_textChanged(const QString &arg1);
+
+    void on_le_outside_diameter_shell_textChanged(const QString &arg1);
+
+    void on_le_design_length_textChanged(const QString &arg1);
+
 private:
     Ui::Permissible_Deviation *ui;
 };
