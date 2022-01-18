@@ -255,7 +255,7 @@ void Permissible_Deviation::on_pb_clear_PD_CY_clicked()
 
 void Permissible_Deviation::on_pb_calculate_max_permissible_deviation_CY_clicked()
 {
-    QString fileName = QCoreApplication::applicationDirPath() + "/CalculationSheet.xlsx";
+    QString fileName = QCoreApplication::applicationDirPath() + "/Resources/Misc/CalculationSheet.xlsx";
     QFile file(fileName);
     try {
         if(file.open(QIODevice::ReadWrite)) {
@@ -307,7 +307,7 @@ void Permissible_Deviation::on_pb_calculate_max_permissible_deviation_CY_clicked
 
 void Permissible_Deviation::on_pb_calculate_max_arc_CY_clicked()
 {
-    QString fileName = QCoreApplication::applicationDirPath() + "/CalculationSheet.xlsx";
+    QString fileName = QCoreApplication::applicationDirPath() + "/Resources/Misc/CalculationSheet.xlsx";
     QFile file(fileName);
     try {
         if(file.open(QIODevice::ReadWrite)) {
@@ -472,7 +472,7 @@ void Permissible_Deviation::on_le_max_arc_DE_textChanged(const QString &arg1)
 
 void Permissible_Deviation::on_pb_calculate_max_permissible_deviation_DE_clicked()
 {
-    QString fileName = QCoreApplication::applicationDirPath() + "/CalculationSheet.xlsx";
+    QString fileName = QCoreApplication::applicationDirPath() + "/Resources/Misc/CalculationSheet.xlsx";
     QFile file(fileName);
     try {
         if(file.open(QIODevice::ReadWrite)) {
@@ -525,7 +525,7 @@ void Permissible_Deviation::on_pb_calculate_max_permissible_deviation_DE_clicked
 
 void Permissible_Deviation::on_pb_calculate_max_arc_DE_clicked()
 {
-    QString fileName = QCoreApplication::applicationDirPath() + "/CalculationSheet.xlsx";
+    QString fileName = QCoreApplication::applicationDirPath() + "/Resources/Misc/CalculationSheet.xlsx";
     QFile file(fileName);
     try {
         if(file.open(QIODevice::ReadWrite)) {
