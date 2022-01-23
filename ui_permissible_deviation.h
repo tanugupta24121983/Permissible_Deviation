@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'permissible_deviation.ui'
 **
-** Created by: Qt User Interface Compiler version 6.2.0
+** Created by: Qt User Interface Compiler version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -530,10 +530,9 @@ public:
         le_design_length->setObjectName(QString::fromUtf8("le_design_length"));
         le_design_length->setMinimumSize(QSize(120, 20));
         le_design_length->setMaximumSize(QSize(120, 20));
-        le_design_length->setStyleSheet(QString::fromUtf8("background-color: rgb(221, 221, 221);\n"
-""));
+        le_design_length->setStyleSheet(QString::fromUtf8(""));
         le_design_length->setAlignment(Qt::AlignCenter);
-        le_design_length->setReadOnly(true);
+        le_design_length->setReadOnly(false);
 
         horizontalLayout->addWidget(le_design_length);
 
@@ -1894,7 +1893,7 @@ public:
 
         retranslateUi(Permissible_Deviation);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Permissible_Deviation);

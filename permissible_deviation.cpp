@@ -28,8 +28,6 @@ Permissible_Deviation::Permissible_Deviation(QWidget *parent)
     QImage image_801(":/Images/801.png");
     ui->lb_801_2->setPixmap(QPixmap::fromImage(image_801));
     ui->lb_801->setPixmap(QPixmap::fromImage(image_801));
-
-
 }
 
 Permissible_Deviation::~Permissible_Deviation()
@@ -80,9 +78,6 @@ void Permissible_Deviation::on_le_thickness_less_CA_textChanged(const QString &a
 
 void Permissible_Deviation::on_le_outside_diameter_shell_textChanged(const QString &arg1)
 {
-    float design_length = ui->le_outside_diameter_shell->text().toFloat() / 2;
-    ui->le_design_length->setText(QString::number(design_length));
-
     float G18 = ui->le_thickness_less_CA->text().toFloat();
     float G20 = ui->le_outside_diameter_shell->text().toFloat();
     float ratio_od_and_thk = G20/G18;
@@ -286,7 +281,7 @@ void Permissible_Deviation::on_pb_calculate_max_permissible_deviation_CY_clicked
         }
         else {
             QMessageBox msgBox;
-            msgBox.setText("Please Make Sure " + fileName + "exists and is not open");
+            msgBox.setText("Please Make Sure file exists and is not open");
             msgBox.exec();
             return;
         }
@@ -299,7 +294,7 @@ void Permissible_Deviation::on_pb_calculate_max_permissible_deviation_CY_clicked
         excel->dynamicCall("Quit()");
         QMessageBox msgBox;
         file.close();
-        msgBox.setText("Please Make Sure " + fileName + "is closed ");
+        msgBox.setText("Please Make Sure file exists and is not open");
         msgBox.exec();
         return;
     }
@@ -339,7 +334,7 @@ void Permissible_Deviation::on_pb_calculate_max_arc_CY_clicked()
         else {
             file.close();
             QMessageBox msgBox;
-            msgBox.setText("Please Make Sure " + fileName + "exists and is not open");
+            msgBox.setText("Please Make Sure file exists and is not open");
             msgBox.exec();
             return;
         }
@@ -352,7 +347,7 @@ void Permissible_Deviation::on_pb_calculate_max_arc_CY_clicked()
 
         file.close();
         QMessageBox msgBox;
-        msgBox.setText("Please Make Sure " + fileName + "exists and is not open");
+        msgBox.setText("Please Make Sure file exists and is not open");
         msgBox.exec();
         return;
     }
@@ -504,7 +499,7 @@ void Permissible_Deviation::on_pb_calculate_max_permissible_deviation_DE_clicked
         else {
             file.close();
             QMessageBox msgBox;
-            msgBox.setText("Please Make Sure " + fileName + "exists and is not open");
+            msgBox.setText("Please Make Sure file exists and is not open");
             msgBox.exec();
             return;
         }
@@ -516,7 +511,7 @@ void Permissible_Deviation::on_pb_calculate_max_permissible_deviation_DE_clicked
         excel->dynamicCall("Quit()");
         QMessageBox msgBox;
         file.close();
-        msgBox.setText("Please Make Sure " + fileName + "is closed ");
+        msgBox.setText("Please Make Sure file exists and is not open");
         msgBox.exec();
         return;
     }
@@ -557,7 +552,7 @@ void Permissible_Deviation::on_pb_calculate_max_arc_DE_clicked()
         else {
             file.close();
             QMessageBox msgBox;
-            msgBox.setText("Please Make Sure " + fileName + "exists and is not open");
+            msgBox.setText("Please Make Sure file exists and is not open");
             msgBox.exec();
             return;
         }
@@ -570,7 +565,7 @@ void Permissible_Deviation::on_pb_calculate_max_arc_DE_clicked()
 
         file.close();
         QMessageBox msgBox;
-        msgBox.setText("Please Make Sure " + fileName + "is closed ");
+        msgBox.setText("Please Make Sure file exists and is not open");
         msgBox.exec();
         return;
     }
