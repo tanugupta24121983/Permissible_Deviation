@@ -123,6 +123,7 @@ void Permissible_Deviation::on_le_max_arc_textChanged(const QString &arg1)
 void Permissible_Deviation::on_pb_generate_report_cylinder_clicked()
 {
     QString fileName = "C:/ISGEC-TOOLS/OP_Template & Max Permissible Deviation For Cylinder 12.xlsx";
+    QString fileName_pdf = "C:/ISGEC-TOOLS/OP_Template_&_Max_Permissible_Deviation_For_Cylinder_12";
     QFile file_write(fileName);
     if(file_write.open(QIODevice::ReadWrite)) {
        excel     = new QAxObject("Excel.Application");
@@ -214,6 +215,7 @@ void Permissible_Deviation::on_pb_generate_report_cylinder_clicked()
     cell->setProperty("Value", ui->le_cy_taken_2->text());
 
     workbook->dynamicCall("Save()");
+    workbook->dynamicCall("ExportAsFixedFormat(int, const QString&, int, BOOL, BOOL)", 0, fileName_pdf, 0, false, false);
     workbook->dynamicCall("Close()");
     workbook->dynamicCall("Quit()");
     excel->dynamicCall("Quit()");
@@ -574,7 +576,8 @@ void Permissible_Deviation::on_pb_calculate_max_arc_DE_clicked()
 
 void Permissible_Deviation::on_fh_pb_generate_report_PD_DE_clicked()
 {
-    QString fileName = ":/Images/Book1.xlsx";
+    QString fileName = "C:/ISGEC-TOOLS/OP_Template & Max Permissible Deviation For DE.xlsx";
+    QString fileName_pdf = "C:/ISGEC-TOOLS/OP_Template_&_Max_Permissible_Deviation_For_DE";
     QFile file_write(fileName);
     if(file_write.open(QIODevice::ReadWrite)) {
        excel     = new QAxObject("Excel.Application");
@@ -671,6 +674,7 @@ void Permissible_Deviation::on_fh_pb_generate_report_PD_DE_clicked()
     cell->setProperty("Value", ui->le_taken_DE_2->text());
 
     workbook->dynamicCall("Save()");
+    workbook->dynamicCall("ExportAsFixedFormat(int, const QString&, int, BOOL, BOOL)", 0, fileName_pdf, 0, false, false);
     workbook->dynamicCall("Close()");
     workbook->dynamicCall("Quit()");
     excel->dynamicCall("Quit()");
